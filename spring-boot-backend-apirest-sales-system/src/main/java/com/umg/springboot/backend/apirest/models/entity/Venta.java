@@ -13,13 +13,9 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name="ventas")
+@Table(name="venta")
 
 public class Venta implements Serializable{
-	
-	/**
-	 * 
-	 */
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

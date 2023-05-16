@@ -13,7 +13,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name="personas")
+@Table(name="persona")
 
 public class Persona implements Serializable{
 	
