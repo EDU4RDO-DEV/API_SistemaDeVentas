@@ -19,7 +19,7 @@ public class Persona implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Persona;
+	private int id_persona;
 	
 	private String nit;
 	private String dpi;
@@ -29,16 +29,12 @@ public class Persona implements Serializable{
 	private String direccion;
 	private String estado;
 	
-	@Column(name="create_at")
-	@Temporal(TemporalType.DATE)
-	private Date createAt;
-
-	public int getId_Persona() {
-		return id_Persona;
+	public int getId_persona() {
+		return id_persona;
 	}
 
-	public void setId_Persona(int id_Persona) {
-		this.id_Persona = id_Persona;
+	public void setId_persona(int id_persona) {
+		this.id_persona = id_persona;
 	}
 
 	public String getNit() {
@@ -95,14 +91,6 @@ public class Persona implements Serializable{
 
 	public void setEstado(String estado) {
 		this.estado = estado;
-	}
-
-	public Date getCreateAt() {
-		return createAt;
-	}
-
-	public void setCreateAt(Date createAt) {
-		this.createAt = createAt;
 	}
 
 	/**
