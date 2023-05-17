@@ -27,7 +27,7 @@ public class Persona implements Serializable{
 	private String apellido;
 	private String telefono;
 	private String direccion;
-	private String estado;
+	private char estado;
 	
 	public int getId_persona() {
 		return id_persona;
@@ -85,11 +85,11 @@ public class Persona implements Serializable{
 		this.direccion = direccion;
 	}
 
-	public String getEstado() {
+	public char getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
 
