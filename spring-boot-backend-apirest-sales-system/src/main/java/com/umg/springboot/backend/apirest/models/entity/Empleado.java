@@ -14,36 +14,45 @@ public class Empleado implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int codigo_Empleado;
+	private int id_persona;
+	private int codigo_empleado;
 	
-	private int tipoEmpleado_Id_TipoEmpleado;
-	private int almacen_Id_Almacen;
+	private int tipoEmpleado_id_tipoEmpleado;
+	private int almacen_id_almacen;
 	private String usuario;
 	private String clave;
-	private String estado;
+	private char estado;
 	
-	public int getCodigo_Empleado() {
-		return codigo_Empleado;
+	public int getId_persona() {
+		return id_persona;
+	}
+	
+	public void setId_persona(int id_persona) {
+		this.id_persona = id_persona;
 	}
 
-	public void setCodigo_Empleado(int codigo_Empleado) {
-		this.codigo_Empleado = codigo_Empleado;
+	public int getCodigo_empleado() {
+		return codigo_empleado;
 	}
 
-	public int getTipoEmpleado_Id_TipoEmpleado() {
-		return tipoEmpleado_Id_TipoEmpleado;
+	public void setCodigo_empleado(int codigo_empleado) {
+		this.codigo_empleado = codigo_empleado;
 	}
 
-	public void setTipoEmpleado_Id_TipoEmpleado(int tipoEmpleado_Id_TipoEmpleado) {
-		this.tipoEmpleado_Id_TipoEmpleado = tipoEmpleado_Id_TipoEmpleado;
+	public int getTipoEmpleado_id_tipoEmpleado() {
+		return tipoEmpleado_id_tipoEmpleado;
+	}
+	
+	public void setTipoEmpleado_id_tipoEmpleado(int tipoEmpleado_id_tipoEmpleado) {
+		this.tipoEmpleado_id_tipoEmpleado = tipoEmpleado_id_tipoEmpleado;
+	}
+	
+	public int getAlmacen_id_almacen() {
+		return almacen_id_almacen;
 	}
 
-	public int getAlmacen_Id_Almacen() {
-		return almacen_Id_Almacen;
-	}
-
-	public void setAlmacen_Id_Almacen(int almacen_Id_Almacen) {
-		this.almacen_Id_Almacen = almacen_Id_Almacen;
+	public void setAlmacen_id_almacen(int almacen_id_almacen) {
+		this.almacen_id_almacen = almacen_id_almacen;
 	}
 
 	public String getUsuario() {
@@ -62,14 +71,14 @@ public class Empleado implements Serializable{
 		this.clave = clave;
 	}
 
-	public String getEstado() {
+	public char getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
-
+	
 	/**
 	 * 
 	 */
