@@ -16,22 +16,22 @@ public class TipoCliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_tipoCliente;
 	
-	private String tipo_cliente;
+	private char tipo_cliente;
 	private double descuento;
 	
 	public int getId_tipoCliente() {
 		return id_tipoCliente;
 	}
-
+	
 	public void setId_tipoCliente(int id_tipoCliente) {
 		this.id_tipoCliente = id_tipoCliente;
 	}
 
-	public String getTipo_cliente() {
+	public char getTipo_cliente() {
 		return tipo_cliente;
 	}
 
-	public void setTipo_cliente(String tipo_cliente) {
+	public void setTipo_cliente(char tipo_cliente) {
 		this.tipo_cliente = tipo_cliente;
 	}
 
@@ -42,7 +42,6 @@ public class TipoCliente implements Serializable{
 	public void setDescuento(double descuento) {
 		this.descuento = descuento;
 	}
-
 
 	/**
 	 * 

@@ -19,48 +19,48 @@ public class Venta implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Venta;
+	private int id_venta;
 	
-	private String cliente_Codigo_Cliente;
-	private int empleado_Codigo_Empleado;
-	private String numero_Venta;
+	private String cliente_codigo_cliente;
+	private int empleado_codigo_empleado;
+	private String numero_venta;
 	private double monto;
-	private String estado;
+	private char estado;
 	
 	@Column(name="create_at")
 	@Temporal(TemporalType.DATE)
-	private Date fecha_Venta;
+	private Date fecha_venta;
 	
-	public int getId_Venta() {
-		return id_Venta;
+	public int getId_venta() {
+		return id_venta;
+	}
+	
+	public void setId_venta(int id_venta) {
+		this.id_venta = id_venta;
 	}
 
-	public void setId_Venta(int id_Venta) {
-		this.id_Venta = id_Venta;
+	public String getCliente_codigo_cliente() {
+		return cliente_codigo_cliente;
 	}
 
-	public String getCliente_Codigo_Cliente() {
-		return cliente_Codigo_Cliente;
+	public void setCliente_codigo_cliente(String cliente_codigo_cliente) {
+		this.cliente_codigo_cliente = cliente_codigo_cliente;
 	}
 
-	public void setCliente_Codigo_Cliente(String cliente_Codigo_Cliente) {
-		this.cliente_Codigo_Cliente = cliente_Codigo_Cliente;
+	public int getEmpleado_codigo_empleado() {
+		return empleado_codigo_empleado;
 	}
 
-	public int getEmpleado_Codigo_Empleado() {
-		return empleado_Codigo_Empleado;
+	public void setEmpleado_codigo_empleado(int empleado_codigo_empleado) {
+		this.empleado_codigo_empleado = empleado_codigo_empleado;
 	}
 
-	public void setEmpleado_Codigo_Empleado(int empleado_Codigo_Empleado) {
-		this.empleado_Codigo_Empleado = empleado_Codigo_Empleado;
+	public String getNumero_venta() {
+		return numero_venta;
 	}
 
-	public String getNumero_Venta() {
-		return numero_Venta;
-	}
-
-	public void setNumero_Venta(String numero_Venta) {
-		this.numero_Venta = numero_Venta;
+	public void setNumero_venta(String numero_venta) {
+		this.numero_venta = numero_venta;
 	}
 
 	public double getMonto() {
@@ -71,20 +71,20 @@ public class Venta implements Serializable{
 		this.monto = monto;
 	}
 
-	public String getEstado() {
+	public char getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
 
-	public Date getFecha_Venta() {
-		return fecha_Venta;
+	public Date getFecha_venta() {
+		return fecha_venta;
 	}
 
-	public void setFecha_Venta(Date fecha_Venta) {
-		this.fecha_Venta = fecha_Venta;
+	public void setFecha_venta(Date fecha_venta) {
+		this.fecha_venta = fecha_venta;
 	}
 
 	/**

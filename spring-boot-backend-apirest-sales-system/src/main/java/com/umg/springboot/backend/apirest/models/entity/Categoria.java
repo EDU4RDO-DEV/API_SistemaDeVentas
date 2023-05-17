@@ -15,26 +15,26 @@ public class Categoria implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Categoria;
+	private int id_categoria;
 	
-	private String nombre_Categoria;
+	private String nombre_categoria;
 	private String descripcion;
-	private String estado;
+	private char estado;
 
-	public int getId_Categoria() {
-		return id_Categoria;
+	public int getId_categoria() {
+		return id_categoria;
 	}
 
-	public void setId_Categoria(int id_Categoria) {
-		this.id_Categoria = id_Categoria;
+	public void setId_categoria(int id_categoria) {
+		this.id_categoria = id_categoria;
 	}
 
-	public String getNombre_Categoria() {
-		return nombre_Categoria;
+	public String getNombre_categoria() {
+		return nombre_categoria;
 	}
 
-	public void setNombre_Categoria(String nombre_Categoria) {
-		this.nombre_Categoria = nombre_Categoria;
+	public void setNombre_categoria(String nombre_categoria) {
+		this.nombre_categoria = nombre_categoria;
 	}
 
 	public String getDescripcion() {
@@ -45,11 +45,11 @@ public class Categoria implements Serializable{
 		this.descripcion = descripcion;
 	}
 
-	public String getEstado() {
+	public char getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
 

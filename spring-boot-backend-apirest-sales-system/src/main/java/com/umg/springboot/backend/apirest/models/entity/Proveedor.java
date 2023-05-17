@@ -15,44 +15,44 @@ public class Proveedor implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Proveedor;
+	private int id_proveedor;
 	
-	private String nombre_Proveedor;
-	private String telefono_Proveedor;
-	private String estado;
+	private String nombre_proveedor;
+	private String telefono_proveedor;
+	private char estado;
 	
-	public int getId_Proveedor() {
-		return id_Proveedor;
+	public int getId_proveedor() {
+		return id_proveedor;
 	}
-	
-	public void setId_Proveedor(int id_Proveedor) {
-		this.id_Proveedor = id_Proveedor;
+
+	public void setId_proveedor(int id_proveedor) {
+		this.id_proveedor = id_proveedor;
 	}
-	
-	public String getNombre_Proveedor() {
-		return nombre_Proveedor;
+
+	public String getNombre_proveedor() {
+		return nombre_proveedor;
 	}
-	
-	public void setNombre_Proveedor(String nombre_Proveedor) {
-		this.nombre_Proveedor = nombre_Proveedor;
+
+	public void setNombre_proveedor(String nombre_proveedor) {
+		this.nombre_proveedor = nombre_proveedor;
 	}
-	
-	public String getTelefono_Proveedor() {
-		return telefono_Proveedor;
+
+	public String getTelefono_proveedor() {
+		return telefono_proveedor;
 	}
-	
-	public void setTelefono_Proveedor(String telefono_Proveedor) {
-		this.telefono_Proveedor = telefono_Proveedor;
+
+	public void setTelefono_proveedor(String telefono_proveedor) {
+		this.telefono_proveedor = telefono_proveedor;
 	}
-	
-	public String getEstado() {
+
+	public char getEstado() {
 		return estado;
 	}
-	
-	public void setEstado(String estado) {
+
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
-	
+
 	/**
 	 * 
 	 */

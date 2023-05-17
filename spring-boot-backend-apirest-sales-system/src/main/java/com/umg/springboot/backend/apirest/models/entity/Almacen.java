@@ -15,52 +15,54 @@ public class Almacen implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Almacen;
+	private int id_almacen;
 	
-	private String nombre_Almacen;
-	private String direccion_Almacen;
-	private String telefono_Almacen;
-	private String estado;
+	private String nombre_almacen;
+	private String direccion_almacen;
+	private String telefono_almacen;
+	private char estado;
 	
-	public int getId_Almacen() {
-		return id_Almacen;
+	public int getId_almacen() {
+		return id_almacen;
 	}
 
-	public void setId_Almacen(int id_Almacen) {
-		this.id_Almacen = id_Almacen;
+	public void setId_almacen(int id_almacen) {
+		this.id_almacen = id_almacen;
 	}
 
-	public String getNombre_Almacen() {
-		return nombre_Almacen;
+	public String getNombre_almacen() {
+		return nombre_almacen;
 	}
 
-	public void setNombre_Almacen(String nombre_Almacen) {
-		this.nombre_Almacen = nombre_Almacen;
+	public void setNombre_almacen(String nombre_almacen) {
+		this.nombre_almacen = nombre_almacen;
 	}
 
-	public String getDireccion_Almacen() {
-		return direccion_Almacen;
+	public String getDireccion_almacen() {
+		return direccion_almacen;
 	}
 
-	public void setDireccion_Almacen(String direccion_Almacen) {
-		this.direccion_Almacen = direccion_Almacen;
+	public void setDireccion_almacen(String direccion_almacen) {
+		this.direccion_almacen = direccion_almacen;
 	}
 
-	public String getTelefono_Almacen() {
-		return telefono_Almacen;
+	public String getTelefono_almacen() {
+		return telefono_almacen;
 	}
 
-	public void setTelefono_Almacen(String telefono_Almacen) {
-		this.telefono_Almacen = telefono_Almacen;
+	public void setTelefono_almacen(String telefono_almacen) {
+		this.telefono_almacen = telefono_almacen;
 	}
 
-	public String getEstado() {
+	public char getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
+
+
 
 	/**
 	 * 

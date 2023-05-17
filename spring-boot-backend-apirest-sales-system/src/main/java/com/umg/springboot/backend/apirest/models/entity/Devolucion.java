@@ -19,39 +19,39 @@ public class Devolucion implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Devolucion;
+	private int id_devolucion;
 	
-	private int detalleVenta_IdDetalleVenta;
-	private int detalleVenta_IdProducto;
+	private int detalleVenta_idDetalleVenta;
+	private long detalleVenta_idProducto;
 	private String motivo;
 	private int cantidad;
 	
 	@Column(name="create_at")
 	@Temporal(TemporalType.DATE)
-	private Date fecha_Devolucion;
+	private Date fecha_devolucion;
 
-	public int getId_Devolucion() {
-		return id_Devolucion;
+	public int getId_devolucion() {
+		return id_devolucion;
 	}
 
-	public void setId_Devolucion(int id_Devolucion) {
-		this.id_Devolucion = id_Devolucion;
+	public void setId_devolucion(int id_devolucion) {
+		this.id_devolucion = id_devolucion;
 	}
 
-	public int getDetalleVenta_IdDetalleVenta() {
-		return detalleVenta_IdDetalleVenta;
+	public int getDetalleVenta_idDetalleVenta() {
+		return detalleVenta_idDetalleVenta;
 	}
 
-	public void setDetalleVenta_IdDetalleVenta(int detalleVenta_IdDetalleVenta) {
-		this.detalleVenta_IdDetalleVenta = detalleVenta_IdDetalleVenta;
+	public void setDetalleVenta_idDetalleVenta(int detalleVenta_idDetalleVenta) {
+		this.detalleVenta_idDetalleVenta = detalleVenta_idDetalleVenta;
 	}
 
-	public int getDetalleVenta_IdProducto() {
-		return detalleVenta_IdProducto;
+	public long getDetalleVenta_idProducto() {
+		return detalleVenta_idProducto;
 	}
 
-	public void setDetalleVenta_IdProducto(int detalleVenta_IdProducto) {
-		this.detalleVenta_IdProducto = detalleVenta_IdProducto;
+	public void setDetalleVenta_idProducto(long detalleVenta_idProducto) {
+		this.detalleVenta_idProducto = detalleVenta_idProducto;
 	}
 
 	public String getMotivo() {
@@ -70,14 +70,14 @@ public class Devolucion implements Serializable{
 		this.cantidad = cantidad;
 	}
 
-	public Date getFecha_Devolucion() {
-		return fecha_Devolucion;
+	public Date getFecha_devolucion() {
+		return fecha_devolucion;
 	}
 
-	public void setFecha_Venta(Date fecha_Devolucion) {
-		this.fecha_Devolucion = fecha_Devolucion;
+	public void setFecha_devolucion(Date fecha_devolucion) {
+		this.fecha_devolucion = fecha_devolucion;
 	}
-	
+
 	/**
 	 * 
 	 */

@@ -12,39 +12,37 @@ import jakarta.persistence.Table;
 @Table(name="detalleVenta")
 public class DetalleVenta implements Serializable{
 
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_DetalleVenta;
+	private int id_detalleVenta;
 	
-	private int venta_Id_Venta;
-	private long producto_Id_Proucto;
+	private int venta_id_venta;
+	private long producto_id_producto;
 	private int cantidad;
-	private double precio_Venta;
+	private double precio_venta;
 	
-	public int getId_DetalleVenta() {
-		return id_DetalleVenta;
+	public int getId_detalleVenta() {
+		return id_detalleVenta;
 	}
 
-	public void setId_DetalleVenta(int id_DetalleVenta) {
-		this.id_DetalleVenta = id_DetalleVenta;
+	public void setId_detalleVenta(int id_detalleVenta) {
+		this.id_detalleVenta = id_detalleVenta;
 	}
 
-	public int getVenta_Id_Venta() {
-		return venta_Id_Venta;
+	public int getVenta_id_venta() {
+		return venta_id_venta;
 	}
 
-	public void setVenta_Id_Venta(int venta_Id_Venta) {
-		this.venta_Id_Venta = venta_Id_Venta;
+	public void setVenta_id_venta(int venta_id_venta) {
+		this.venta_id_venta = venta_id_venta;
 	}
 
-	public long getProducto_Id_Proucto() {
-		return producto_Id_Proucto;
+	public long getProducto_id_producto() {
+		return producto_id_producto;
 	}
 
-	public void setProducto_Id_Proucto(long producto_Id_Proucto) {
-		this.producto_Id_Proucto = producto_Id_Proucto;
+	public void setProducto_id_producto(long producto_id_producto) {
+		this.producto_id_producto = producto_id_producto;
 	}
 
 	public int getCantidad() {
@@ -54,13 +52,13 @@ public class DetalleVenta implements Serializable{
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	
-	public double getPrecio_Venta() {
-		return precio_Venta;
+
+	public double getPrecio_venta() {
+		return precio_venta;
 	}
 
-	public void setPrecio_Venta(double precio_Venta) {
-		this.precio_Venta = precio_Venta;
+	public void setPrecio_venta(double precio_venta) {
+		this.precio_venta = precio_venta;
 	}
 
 	/**
