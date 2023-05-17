@@ -14,32 +14,32 @@ public class TipoEmpleado implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_TipoEmpleado;
+	private int id_tipoEmpleado;
 	
-	private String tipo_Empleado;
-	private String estado;
-
-	public int getId_TipoEmpleado() {
-		return id_TipoEmpleado;
+	private String tipo_empleado;
+	private char estado;
+	
+	public int getId_tipoEmpleado() {
+		return id_tipoEmpleado;
 	}
 
-	public void setId_TipoEmpleado(int id_TipoEmpleado) {
-		this.id_TipoEmpleado = id_TipoEmpleado;
+	public void setId_tipoEmpleado(int id_tipoEmpleado) {
+		this.id_tipoEmpleado = id_tipoEmpleado;
 	}
 
-	public String getTipo_Empleado() {
-		return tipo_Empleado;
+	public String getTipo_empleado() {
+		return tipo_empleado;
 	}
 
-	public void setTipo_Empleado(String tipo_Empleado) {
-		this.tipo_Empleado = tipo_Empleado;
+	public void setTipo_empleado(String tipo_empleado) {
+		this.tipo_empleado = tipo_empleado;
 	}
 
-	public String getEstado() {
+	public char getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(char estado) {
 		this.estado = estado;
 	}
 
