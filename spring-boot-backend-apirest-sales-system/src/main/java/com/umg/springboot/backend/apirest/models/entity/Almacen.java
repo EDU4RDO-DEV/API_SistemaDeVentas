@@ -63,7 +63,6 @@ public class Almacen implements Serializable{
 	}
 
 
-
 	/**
 	 * 
 	 */
