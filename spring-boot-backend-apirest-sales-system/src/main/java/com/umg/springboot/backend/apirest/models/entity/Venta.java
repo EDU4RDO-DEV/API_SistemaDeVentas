@@ -27,7 +27,7 @@ public class Venta implements Serializable{
 	private double monto;
 	private char estado;
 	
-	@Column(name="create_at")
+	@Column(name="fecha_venta")
 	@Temporal(TemporalType.DATE)
 	private Date fecha_venta;
 	
