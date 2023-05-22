@@ -21,4 +21,25 @@ public class VentaServiceImpl implements IVentaService{
 		 
 		return (List<Venta>) ventaDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Venta findById(Long id) {
+		// TODO Auto-generated method stub
+		return ventaDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Venta save(Venta venta) {
+		// TODO Auto-generated method stub
+		return ventaDao.save(venta);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		ventaDao.deleteById(id);
+	}
 }
