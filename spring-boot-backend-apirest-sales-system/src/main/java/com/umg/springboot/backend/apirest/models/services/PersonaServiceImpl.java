@@ -21,4 +21,25 @@ public class PersonaServiceImpl implements IPersonaService{
 		 
 		return (List<Persona>) personaDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Persona findById(Long id) {
+		// TODO Auto-generated method stub
+		return personaDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Persona save(Persona persona) {
+		// TODO Auto-generated method stub
+		return personaDao.save(persona);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		personaDao.deleteById(id);
+	}
 }
