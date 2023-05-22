@@ -26,7 +26,7 @@ public class Cliente implements Serializable{
 	public void setId_Persona(int id_Persona) {
 		Id_Persona = id_Persona;
 	}
-
+	
 	public String getCodigo_Cliente() {
 		return Codigo_Cliente;
 	}
@@ -34,7 +34,7 @@ public class Cliente implements Serializable{
 	public void setCodigo_Cliente(String codigo_Cliente) {
 		Codigo_Cliente = codigo_Cliente;
 	}
-
+	
 	public int getTipoCliente_Id_TipoCliente() {
 		return TipoCliente_Id_TipoCliente;
 	}
