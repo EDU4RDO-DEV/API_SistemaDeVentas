@@ -21,4 +21,25 @@ public class DevolucionServiceImpl implements IDevolucionService{
 		 
 		return (List<Devolucion>) devolucionDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Devolucion findById(Long id) {
+		// TODO Auto-generated method stub
+		return devolucionDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Devolucion save(Devolucion devolucion) {
+		// TODO Auto-generated method stub
+		return devolucionDao.save(devolucion);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		devolucionDao.deleteById(id);
+	}
 }
