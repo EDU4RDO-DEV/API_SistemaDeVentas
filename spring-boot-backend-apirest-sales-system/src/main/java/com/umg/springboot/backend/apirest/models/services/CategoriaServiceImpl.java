@@ -21,4 +21,25 @@ public class CategoriaServiceImpl implements ICategoriaService{
 		 
 		return (List<Categoria>) categoriaDao.findAll();
 	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Categoria findById(Long id) {
+		// TODO Auto-generated method stub
+		return categoriaDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Categoria save(Categoria categoria) {
+		// TODO Auto-generated method stub
+		return categoriaDao.save(categoria);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		categoriaDao.deleteById(id);
+	}
 }
