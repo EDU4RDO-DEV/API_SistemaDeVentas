@@ -9,59 +9,58 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="almacen")
+@Table(name="tb_almacen")
 
 public class Almacen implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_almacen;
+	private int Id_Almacen;
 	
-	private String nombre_almacen;
-	private String direccion_almacen;
-	private String telefono_almacen;
-	private char estado;
+	private String Nombre_almacen;
+	private String Dirección_almacen;
+	private String Telefono_almacen;
+	private char Estado;
 	
-	public int getId_almacen() {
-		return id_almacen;
+	public int getId_Almacen() {
+		return Id_Almacen;
 	}
 
-	public void setId_almacen(int id_almacen) {
-		this.id_almacen = id_almacen;
+	public void setId_Almacen(int id_Almacen) {
+		Id_Almacen = id_Almacen;
 	}
 
 	public String getNombre_almacen() {
-		return nombre_almacen;
+		return Nombre_almacen;
 	}
 
 	public void setNombre_almacen(String nombre_almacen) {
-		this.nombre_almacen = nombre_almacen;
+		Nombre_almacen = nombre_almacen;
 	}
 
-	public String getDireccion_almacen() {
-		return direccion_almacen;
+	public String getDirección_almacen() {
+		return Dirección_almacen;
 	}
 
-	public void setDireccion_almacen(String direccion_almacen) {
-		this.direccion_almacen = direccion_almacen;
+	public void setDirección_almacen(String dirección_almacen) {
+		Dirección_almacen = dirección_almacen;
 	}
 
 	public String getTelefono_almacen() {
-		return telefono_almacen;
+		return Telefono_almacen;
 	}
 
 	public void setTelefono_almacen(String telefono_almacen) {
-		this.telefono_almacen = telefono_almacen;
+		Telefono_almacen = telefono_almacen;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
-
 
 	/**
 	 * 

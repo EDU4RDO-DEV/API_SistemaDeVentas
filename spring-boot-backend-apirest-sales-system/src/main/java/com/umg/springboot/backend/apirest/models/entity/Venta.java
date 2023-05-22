@@ -13,78 +13,78 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name="venta")
+@Table(name="tb_venta")
 
 public class Venta implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_venta;
+	private int Id_Venta;
 	
-	private String cliente_codigo_cliente;
-	private int empleado_codigo_empleado;
-	private String numero_venta;
-	private double monto;
-	private char estado;
+	private String Cliente_Codigo_Cliente;
+	private int Empleado_Codigo_Empleado;
+	private String Numero_venta;
+	private double Monto;
+	private char Estado;
 	
-	@Column(name="fecha_venta")
+	@Column(name="Fecha_vneta")
 	@Temporal(TemporalType.DATE)
-	private Date fecha_venta;
+	private Date Fecha_vneta;
 	
-	public int getId_venta() {
-		return id_venta;
-	}
-	
-	public void setId_venta(int id_venta) {
-		this.id_venta = id_venta;
+	public int getId_Venta() {
+		return Id_Venta;
 	}
 
-	public String getCliente_codigo_cliente() {
-		return cliente_codigo_cliente;
+	public void setId_Venta(int id_Venta) {
+		Id_Venta = id_Venta;
 	}
 
-	public void setCliente_codigo_cliente(String cliente_codigo_cliente) {
-		this.cliente_codigo_cliente = cliente_codigo_cliente;
+	public String getCliente_Codigo_Cliente() {
+		return Cliente_Codigo_Cliente;
 	}
 
-	public int getEmpleado_codigo_empleado() {
-		return empleado_codigo_empleado;
+	public void setCliente_Codigo_Cliente(String cliente_Codigo_Cliente) {
+		Cliente_Codigo_Cliente = cliente_Codigo_Cliente;
 	}
 
-	public void setEmpleado_codigo_empleado(int empleado_codigo_empleado) {
-		this.empleado_codigo_empleado = empleado_codigo_empleado;
+	public int getEmpleado_Codigo_Empleado() {
+		return Empleado_Codigo_Empleado;
+	}
+
+	public void setEmpleado_Codigo_Empleado(int empleado_Codigo_Empleado) {
+		Empleado_Codigo_Empleado = empleado_Codigo_Empleado;
 	}
 
 	public String getNumero_venta() {
-		return numero_venta;
+		return Numero_venta;
 	}
 
 	public void setNumero_venta(String numero_venta) {
-		this.numero_venta = numero_venta;
+		Numero_venta = numero_venta;
 	}
 
 	public double getMonto() {
-		return monto;
+		return Monto;
 	}
 
 	public void setMonto(double monto) {
-		this.monto = monto;
+		Monto = monto;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
 
-	public Date getFecha_venta() {
-		return fecha_venta;
+	public Date getFecha_vneta() {
+		return Fecha_vneta;
 	}
 
-	public void setFecha_venta(Date fecha_venta) {
-		this.fecha_venta = fecha_venta;
+	public void setFecha_vneta(Date fecha_vneta) {
+		Fecha_vneta = fecha_vneta;
 	}
 
 	/**

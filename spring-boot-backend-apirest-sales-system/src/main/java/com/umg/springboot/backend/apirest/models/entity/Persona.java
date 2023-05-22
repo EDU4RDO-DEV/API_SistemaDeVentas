@@ -9,84 +9,84 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="persona")
+@Table(name="tb_persona")
 
 public class Persona implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_persona;
+	private int Id_Persona;
 	
-	private String nit;
-	private String dpi;
-	private String nombre;
-	private String apellido;
-	private String telefono;
-	private String direccion;
-	private char estado;
+	private String Nit;
+	private String Dpi;
+	private String Nombre;
+	private String Apellido;
+	private String Telefono;
+	private String Direccion;
+	private char Estado;
 	
-	public int getId_persona() {
-		return id_persona;
+	public int getId_Persona() {
+		return Id_Persona;
 	}
 
-	public void setId_persona(int id_persona) {
-		this.id_persona = id_persona;
+	public void setId_Persona(int id_Persona) {
+		Id_Persona = id_Persona;
 	}
 
 	public String getNit() {
-		return nit;
+		return Nit;
 	}
 
 	public void setNit(String nit) {
-		this.nit = nit;
+		Nit = nit;
 	}
 
 	public String getDpi() {
-		return dpi;
+		return Dpi;
 	}
 
 	public void setDpi(String dpi) {
-		this.dpi = dpi;
+		Dpi = dpi;
 	}
 
 	public String getNombre() {
-		return nombre;
+		return Nombre;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		Nombre = nombre;
 	}
 
 	public String getApellido() {
-		return apellido;
+		return Apellido;
 	}
 
 	public void setApellido(String apellido) {
-		this.apellido = apellido;
+		Apellido = apellido;
 	}
 
 	public String getTelefono() {
-		return telefono;
+		return Telefono;
 	}
 
 	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+		Telefono = telefono;
 	}
 
 	public String getDireccion() {
-		return direccion;
+		return Direccion;
 	}
 
 	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+		Direccion = direccion;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
 
 	/**

@@ -9,38 +9,38 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="tipoEmpleado")
+@Table(name="tb_tipoempleado")
 public class TipoEmpleado implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_tipoEmpleado;
+	private int Id_TipoEmpleado;
 	
-	private String tipo_empleado;
-	private char estado;
+	private String Tipo_empleado;
+	private char Estado;
 	
-	public int getId_tipoEmpleado() {
-		return id_tipoEmpleado;
+	public int getId_TipoEmpleado() {
+		return Id_TipoEmpleado;
 	}
 
-	public void setId_tipoEmpleado(int id_tipoEmpleado) {
-		this.id_tipoEmpleado = id_tipoEmpleado;
+	public void setId_TipoEmpleado(int id_TipoEmpleado) {
+		Id_TipoEmpleado = id_TipoEmpleado;
 	}
 
 	public String getTipo_empleado() {
-		return tipo_empleado;
+		return Tipo_empleado;
 	}
 
 	public void setTipo_empleado(String tipo_empleado) {
-		this.tipo_empleado = tipo_empleado;
+		Tipo_empleado = tipo_empleado;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
 
 	/**

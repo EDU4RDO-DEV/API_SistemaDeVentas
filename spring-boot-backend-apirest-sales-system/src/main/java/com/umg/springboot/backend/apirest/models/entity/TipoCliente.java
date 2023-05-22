@@ -9,38 +9,38 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="tipoCliente")
+@Table(name="tb_tipocliente")
 public class TipoCliente implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_tipoCliente;
+	private int Id_Tipocliente;
 	
-	private char tipo_cliente;
-	private double descuento;
+	private char Tipo_cliente;
+	private double Descuento;
 	
-	public int getId_tipoCliente() {
-		return id_tipoCliente;
+	public int getId_Tipocliente() {
+		return Id_Tipocliente;
 	}
-	
-	public void setId_tipoCliente(int id_tipoCliente) {
-		this.id_tipoCliente = id_tipoCliente;
+
+	public void setId_Tipocliente(int id_Tipocliente) {
+		Id_Tipocliente = id_Tipocliente;
 	}
 
 	public char getTipo_cliente() {
-		return tipo_cliente;
+		return Tipo_cliente;
 	}
 
 	public void setTipo_cliente(char tipo_cliente) {
-		this.tipo_cliente = tipo_cliente;
+		Tipo_cliente = tipo_cliente;
 	}
 
 	public double getDescuento() {
-		return descuento;
+		return Descuento;
 	}
 
 	public void setDescuento(double descuento) {
-		this.descuento = descuento;
+		Descuento = descuento;
 	}
 
 	/**

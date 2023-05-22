@@ -9,76 +9,76 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="empleado")
+@Table(name="tb_empleado")
 public class Empleado implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_persona;
-	private int codigo_empleado;
+	private int Id_Persona;
+	private int Codigo_Empleado;
 	
-	private int tipoEmpleado_id_tipoEmpleado;
-	private int almacen_id_almacen;
-	private String usuario;
-	private String clave;
-	private char estado;
+	private int TipoEmpleado_Id_TipoEmpleado;
+	private int Almacen_Id_Almacen;
+	private String Usuario;
+	private String Clave;
+	private char Estado;
 	
-	public int getId_persona() {
-		return id_persona;
-	}
-	
-	public void setId_persona(int id_persona) {
-		this.id_persona = id_persona;
+	public int getId_Persona() {
+		return Id_Persona;
 	}
 
-	public int getCodigo_empleado() {
-		return codigo_empleado;
+	public void setId_Persona(int id_Persona) {
+		Id_Persona = id_Persona;
 	}
 
-	public void setCodigo_empleado(int codigo_empleado) {
-		this.codigo_empleado = codigo_empleado;
+	public int getCodigo_Empleado() {
+		return Codigo_Empleado;
 	}
 
-	public int getTipoEmpleado_id_tipoEmpleado() {
-		return tipoEmpleado_id_tipoEmpleado;
-	}
-	
-	public void setTipoEmpleado_id_tipoEmpleado(int tipoEmpleado_id_tipoEmpleado) {
-		this.tipoEmpleado_id_tipoEmpleado = tipoEmpleado_id_tipoEmpleado;
-	}
-	
-	public int getAlmacen_id_almacen() {
-		return almacen_id_almacen;
+	public void setCodigo_Empleado(int codigo_Empleado) {
+		Codigo_Empleado = codigo_Empleado;
 	}
 
-	public void setAlmacen_id_almacen(int almacen_id_almacen) {
-		this.almacen_id_almacen = almacen_id_almacen;
+	public int getTipoEmpleado_Id_TipoEmpleado() {
+		return TipoEmpleado_Id_TipoEmpleado;
+	}
+
+	public void setTipoEmpleado_Id_TipoEmpleado(int tipoEmpleado_Id_TipoEmpleado) {
+		TipoEmpleado_Id_TipoEmpleado = tipoEmpleado_Id_TipoEmpleado;
+	}
+
+	public int getAlmacen_Id_Almacen() {
+		return Almacen_Id_Almacen;
+	}
+
+	public void setAlmacen_Id_Almacen(int almacen_Id_Almacen) {
+		Almacen_Id_Almacen = almacen_Id_Almacen;
 	}
 
 	public String getUsuario() {
-		return usuario;
+		return Usuario;
 	}
 
 	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+		Usuario = usuario;
 	}
 
 	public String getClave() {
-		return clave;
+		return Clave;
 	}
 
 	public void setClave(String clave) {
-		this.clave = clave;
+		Clave = clave;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
-	
+
 	/**
 	 * 
 	 */

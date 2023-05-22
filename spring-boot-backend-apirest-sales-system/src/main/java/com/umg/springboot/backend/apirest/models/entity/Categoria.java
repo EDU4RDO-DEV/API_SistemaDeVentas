@@ -9,48 +9,48 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="categoria")
+@Table(name="tb_categoria")
 
 public class Categoria implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_categoria;
+	private int Id_Categoria;
 	
-	private String nombre_categoria;
-	private String descripcion;
-	private char estado;
+	private String Nombre_categoria;
+	private String Descripcion;
+	private char Estado;
 
-	public int getId_categoria() {
-		return id_categoria;
+	public int getId_Categoria() {
+		return Id_Categoria;
 	}
 
-	public void setId_categoria(int id_categoria) {
-		this.id_categoria = id_categoria;
+	public void setId_Categoria(int id_Categoria) {
+		Id_Categoria = id_Categoria;
 	}
 
 	public String getNombre_categoria() {
-		return nombre_categoria;
+		return Nombre_categoria;
 	}
 
 	public void setNombre_categoria(String nombre_categoria) {
-		this.nombre_categoria = nombre_categoria;
+		Nombre_categoria = nombre_categoria;
 	}
 
 	public String getDescripcion() {
-		return descripcion;
+		return Descripcion;
 	}
 
 	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+		Descripcion = descripcion;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
 
 	/**

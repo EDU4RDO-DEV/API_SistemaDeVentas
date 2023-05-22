@@ -13,69 +13,69 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name="devolucion")
+@Table(name="tb_devolucion")
 
 public class Devolucion implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_devolucion;
+	private int Id_Devolucion;
 	
-	private int detalleVenta_idDetalleVenta;
-	private long detalleVenta_idProducto;
-	private String motivo;
-	private int cantidad;
+	private int DetalleVenta_IdDetalleVenta;
+	private long DetalleVenta_IdProducto;
+	private String Motivo;
+	private int Cantidad;
 	
-	@Column(name="create_at")
+	@Column(name="Fecha_devolucion")
 	@Temporal(TemporalType.DATE)
-	private Date fecha_devolucion;
+	private Date Fecha_devolucion;
 
-	public int getId_devolucion() {
-		return id_devolucion;
+	public int getId_Devolucion() {
+		return Id_Devolucion;
 	}
 
-	public void setId_devolucion(int id_devolucion) {
-		this.id_devolucion = id_devolucion;
+	public void setId_Devolucion(int id_Devolucion) {
+		Id_Devolucion = id_Devolucion;
 	}
 
-	public int getDetalleVenta_idDetalleVenta() {
-		return detalleVenta_idDetalleVenta;
+	public int getDetalleVenta_IdDetalleVenta() {
+		return DetalleVenta_IdDetalleVenta;
 	}
 
-	public void setDetalleVenta_idDetalleVenta(int detalleVenta_idDetalleVenta) {
-		this.detalleVenta_idDetalleVenta = detalleVenta_idDetalleVenta;
+	public void setDetalleVenta_IdDetalleVenta(int detalleVenta_IdDetalleVenta) {
+		DetalleVenta_IdDetalleVenta = detalleVenta_IdDetalleVenta;
 	}
 
-	public long getDetalleVenta_idProducto() {
-		return detalleVenta_idProducto;
+	public long getDetalleVenta_IdProducto() {
+		return DetalleVenta_IdProducto;
 	}
 
-	public void setDetalleVenta_idProducto(long detalleVenta_idProducto) {
-		this.detalleVenta_idProducto = detalleVenta_idProducto;
+	public void setDetalleVenta_IdProducto(long detalleVenta_IdProducto) {
+		DetalleVenta_IdProducto = detalleVenta_IdProducto;
 	}
 
 	public String getMotivo() {
-		return motivo;
+		return Motivo;
 	}
 
 	public void setMotivo(String motivo) {
-		this.motivo = motivo;
+		Motivo = motivo;
 	}
 
 	public int getCantidad() {
-		return cantidad;
+		return Cantidad;
 	}
 
 	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
+		Cantidad = cantidad;
 	}
 
 	public Date getFecha_devolucion() {
-		return fecha_devolucion;
+		return Fecha_devolucion;
 	}
 
 	public void setFecha_devolucion(Date fecha_devolucion) {
-		this.fecha_devolucion = fecha_devolucion;
+		Fecha_devolucion = fecha_devolucion;
 	}
 
 	/**

@@ -9,46 +9,46 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="cliente")
+@Table(name="tb_cliente")
 public class Cliente implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_persona;
+	private int Id_Persona;
 	
-	private String codigo_cliente;
-	private int tipoCliente_id_tipoCliente;
-	private char estado;
+	private String Codigo_Cliente;
+	private int TipoCliente_Id_TipoCliente;
+	private char Estado;
 	
-	public int getId_persona() {
-		return id_persona;
+	public int getId_Persona() {
+		return Id_Persona;
 	}
 
-	public void setId_persona(int id_persona) {
-		this.id_persona = id_persona;
+	public void setId_Persona(int id_Persona) {
+		Id_Persona = id_Persona;
 	}
 
-	public String getCodigo_cliente() {
-		return codigo_cliente;
+	public String getCodigo_Cliente() {
+		return Codigo_Cliente;
 	}
 
-	public void setCodigo_cliente(String codigo_cliente) {
-		this.codigo_cliente = codigo_cliente;
+	public void setCodigo_Cliente(String codigo_Cliente) {
+		Codigo_Cliente = codigo_Cliente;
 	}
 
-	public int getTipoCliente_id_tipoCliente() {
-		return tipoCliente_id_tipoCliente;
+	public int getTipoCliente_Id_TipoCliente() {
+		return TipoCliente_Id_TipoCliente;
 	}
 
-	public void setTipoCliente_id_tipoCliente(int tipoCliente_id_tipoCliente) {
-		this.tipoCliente_id_tipoCliente = tipoCliente_id_tipoCliente;
+	public void setTipoCliente_Id_TipoCliente(int tipoCliente_Id_TipoCliente) {
+		TipoCliente_Id_TipoCliente = tipoCliente_Id_TipoCliente;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
 
 	/**

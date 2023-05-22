@@ -9,93 +9,93 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="producto")
+@Table(name="tb_producto")
 
 public class Producto implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id_producto;
+	private long Id_Producto;
 	
-	private int categoria_id_categoria;
-	private int proveedor_id_proveedor;
-	private int almacen_idAlmacen;
-	private String nombre_producto;
-	private double precio;
-	private int stock;
-	private String descripcion;
-	private char estado;
+	private int Categoria_Id_Categoria;
+	private int Proveedor_Id_Proveedor;
+	private int Almace_IdAlmacen;
+	private String Nombre_producto;
+	private double Precio;
+	private int Stock;
+	private String Descripcion;
+	private char Estado;
 	
-	public long getId_producto() {
-		return id_producto;
+	public long getId_Producto() {
+		return Id_Producto;
 	}
 
-	public void setId_producto(long id_producto) {
-		this.id_producto = id_producto;
+	public void setId_Producto(long id_Producto) {
+		Id_Producto = id_Producto;
 	}
 
-	public int getCategoria_id_categoria() {
-		return categoria_id_categoria;
+	public int getCategoria_Id_Categoria() {
+		return Categoria_Id_Categoria;
 	}
 
-	public void setCategoria_id_categoria(int categoria_id_categoria) {
-		this.categoria_id_categoria = categoria_id_categoria;
+	public void setCategoria_Id_Categoria(int categoria_Id_Categoria) {
+		Categoria_Id_Categoria = categoria_Id_Categoria;
 	}
 
-	public int getProveedor_id_proveedor() {
-		return proveedor_id_proveedor;
+	public int getProveedor_Id_Proveedor() {
+		return Proveedor_Id_Proveedor;
 	}
 
-	public void setProveedor_id_proveedor(int proveedor_id_proveedor) {
-		this.proveedor_id_proveedor = proveedor_id_proveedor;
+	public void setProveedor_Id_Proveedor(int proveedor_Id_Proveedor) {
+		Proveedor_Id_Proveedor = proveedor_Id_Proveedor;
 	}
 
-	public int getAlmacen_idAlmacen() {
-		return almacen_idAlmacen;
+	public int getAlmace_IdAlmacen() {
+		return Almace_IdAlmacen;
 	}
 
-	public void setAlmacen_idAlmacen(int almacen_idAlmacen) {
-		this.almacen_idAlmacen = almacen_idAlmacen;
+	public void setAlmace_IdAlmacen(int almace_IdAlmacen) {
+		Almace_IdAlmacen = almace_IdAlmacen;
 	}
 
 	public String getNombre_producto() {
-		return nombre_producto;
+		return Nombre_producto;
 	}
 
 	public void setNombre_producto(String nombre_producto) {
-		this.nombre_producto = nombre_producto;
+		Nombre_producto = nombre_producto;
 	}
 
 	public double getPrecio() {
-		return precio;
+		return Precio;
 	}
 
 	public void setPrecio(double precio) {
-		this.precio = precio;
+		Precio = precio;
 	}
 
 	public int getStock() {
-		return stock;
+		return Stock;
 	}
 
 	public void setStock(int stock) {
-		this.stock = stock;
+		Stock = stock;
 	}
 
 	public String getDescripcion() {
-		return descripcion;
+		return Descripcion;
 	}
 
 	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+		Descripcion = descripcion;
 	}
 
 	public char getEstado() {
-		return estado;
+		return Estado;
 	}
 
 	public void setEstado(char estado) {
-		this.estado = estado;
+		Estado = estado;
 	}
 
 	/**
