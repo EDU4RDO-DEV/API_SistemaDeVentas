@@ -21,4 +21,25 @@ public class ProveedorServiceImpl implements IProveedorService{
 		 
 		return (List<Proveedor>) proveedorDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Proveedor findById(Long id) {
+		// TODO Auto-generated method stub
+		return proveedorDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Proveedor save(Proveedor proveedor) {
+		// TODO Auto-generated method stub
+		return proveedorDao.save(proveedor);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		proveedorDao.deleteById(id);
+	}
 }

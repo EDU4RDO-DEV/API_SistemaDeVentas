@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="tb_proveedor")
-
 public class Proveedor implements Serializable{
 
 	@Id
