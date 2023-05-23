@@ -21,4 +21,25 @@ public class AlmacenServiceImpl implements IAlmacenService{
 		 
 		return (List<Almacen>) almacenDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Almacen findById(Long id) {
+		// TODO Auto-generated method stub
+		return almacenDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Almacen save(Almacen almacen) {
+		// TODO Auto-generated method stub
+		return almacenDao.save(almacen);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		almacenDao.deleteById(id);
+	}
 }
