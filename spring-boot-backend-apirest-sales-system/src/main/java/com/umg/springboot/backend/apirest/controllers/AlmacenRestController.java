@@ -47,10 +47,11 @@ public class AlmacenRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Almacen update(@RequestBody Almacen almacen, @PathVariable Long id) {
 		Almacen almacenActual = almacenService.findById(id);
+	    Character almacenEstado = almacen.getEstado();
 		almacenActual.setNombre_almacen(almacen.getNombre_almacen());
 		almacenActual.setDireccion_almacen(almacen.getDireccion_almacen());
 		almacenActual.setTelefono_almacen(almacen.getTelefono_almacen());
-		almacenActual.setEstado(almacen.getEstado());
+		almacenActual.setEstado(almacenEstado);
 		return almacenService.save(almacenActual);	
 	}
 	
