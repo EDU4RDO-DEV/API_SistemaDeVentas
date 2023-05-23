@@ -47,6 +47,8 @@ public class ProductoRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Producto update(@RequestBody Producto producto, @PathVariable Long id) {
 		Producto productoActual = productoService.findById(id);
+	    Character productoEstado = producto.getEstado();
+
 		productoActual.setCategoria_Id_Categoria(producto.getCategoria_Id_Categoria());
 		productoActual.setProveedor_Id_Proveedor(producto.getProveedor_Id_Proveedor());
 		productoActual.setAlmace_IdAlmacen(producto.getAlmace_IdAlmacen());
@@ -54,7 +56,7 @@ public class ProductoRestController {
 		productoActual.setPrecio(producto.getPrecio());
 		productoActual.setStock(producto.getStock());
 		productoActual.setDescripcion(producto.getDescripcion());
-		productoActual.setEstado(producto.getEstado());
+		productoActual.setEstado(productoEstado);
 		return productoService.save(productoActual);	
 	}
 	
