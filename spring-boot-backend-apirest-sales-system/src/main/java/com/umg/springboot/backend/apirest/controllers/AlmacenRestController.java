@@ -48,7 +48,7 @@ public class AlmacenRestController {
 	public Almacen update(@RequestBody Almacen almacen, @PathVariable Long id) {
 		Almacen almacenActual = almacenService.findById(id);
 		almacenActual.setNombre_almacen(almacen.getNombre_almacen());
-		almacenActual.setDirección_almacen(almacen.getDirección_almacen());
+		almacenActual.setDireccion_almacen(almacen.getDireccion_almacen());
 		almacenActual.setTelefono_almacen(almacen.getTelefono_almacen());
 		almacenActual.setEstado(almacen.getEstado());
 		return almacenService.save(almacenActual);	
@@ -71,8 +71,8 @@ public class AlmacenRestController {
 	    		almacenActual.setNombre_almacen(almacen.getNombre_almacen());
 	    	}
 	    	
-	    	if (almacen.getDirección_almacen() != null) {
-	    		almacenActual.setDirección_almacen(almacen.getDirección_almacen());
+	    	if (almacen.getDireccion_almacen() != null) {
+	    		almacenActual.setDireccion_almacen(almacen.getDireccion_almacen());
 	    	}
 	    	
 	    	if (almacen.getTelefono_almacen() != null) {
