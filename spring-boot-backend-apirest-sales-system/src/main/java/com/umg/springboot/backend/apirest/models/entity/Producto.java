@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="tb_producto")
-
 public class Producto implements Serializable{
 
 	@Id

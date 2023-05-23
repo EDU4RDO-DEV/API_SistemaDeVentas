@@ -21,4 +21,25 @@ public class TipoEmpleadoServiceImpl implements ITipoEmpleadoService{
 		 
 		return (List<TipoEmpleado>) tipoEmpleadoDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public TipoEmpleado findById(Long id) {
+		// TODO Auto-generated method stub
+		return tipoEmpleadoDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public TipoEmpleado save(TipoEmpleado tipoEmpleado) {
+		// TODO Auto-generated method stub
+		return tipoEmpleadoDao.save(tipoEmpleado);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		tipoEmpleadoDao.deleteById(id);
+	}
 }

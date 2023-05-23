@@ -7,4 +7,10 @@ import com.umg.springboot.backend.apirest.models.entity.TipoEmpleado;
 public interface ITipoEmpleadoService {
 
 	public List<TipoEmpleado> findAll();
+	
+	public TipoEmpleado findById(Long id);
+	
+	public TipoEmpleado save(TipoEmpleado tipoEmpleado);
+	
+	public void delete(Long id);
 }

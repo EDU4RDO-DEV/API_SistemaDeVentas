@@ -2,6 +2,7 @@ package com.umg.springboot.backend.apirest.models.entity;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class TipoEmpleado implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Id_TipoEmpleado")
 	private int Id_TipoEmpleado;
 	
 	private String Tipo_empleado;
@@ -47,4 +49,5 @@ public class TipoEmpleado implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 }
