@@ -21,4 +21,25 @@ public class TipoClienteServiceImpl implements ITipoClienteService{
 		 
 		return (List<TipoCliente>) tipoClienteDao.findAll();
 	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public TipoCliente findById(Long id) {
+		// TODO Auto-generated method stub
+		return tipoClienteDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public TipoCliente save(TipoCliente tipoCliente) {
+		// TODO Auto-generated method stub
+		return tipoClienteDao.save(tipoCliente);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		tipoClienteDao.deleteById(id);
+	}
 }
