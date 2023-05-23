@@ -28,13 +28,13 @@ public class Venta implements Serializable{
 	private double Monto;
 	private char Estado;
 	
-	@Column(name="Fecha_vneta")
+	@Column(name="Fecha_venta")
 	@Temporal(TemporalType.DATE)
-	private Date Fecha_vneta;
+	private Date Fecha_venta;
 	
 	@PrePersist
 	public void prePersist() {
-		Fecha_vneta = new Date();
+		Fecha_venta = new Date();
 	}
 	
 	public int getId_Venta() {
@@ -85,16 +85,21 @@ public class Venta implements Serializable{
 		Estado = estado;
 	}
 
-	public Date getFecha_vneta() {
-		return Fecha_vneta;
-	}
+	
 
-	public void setFecha_vneta(Date fecha_vneta) {
-		Fecha_vneta = fecha_vneta;
+	public void setFecha_venta(Date fecha_venta) {
+		Fecha_venta = fecha_venta;
 	}
 
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
+
+	public Date getFecha_venta() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }
