@@ -32,7 +32,7 @@ public class TipoEmpleadoRestController {
 		return tipoEmpleadoService.findAll();
 	}	
 	
-	@GetMapping("/tipoempleados/get/{id}")
+	@GetMapping("/tipoempleados/get={id}")
 	public TipoEmpleado show(@PathVariable Long id) {
 		return tipoEmpleadoService.findById(id);
 	}
@@ -43,7 +43,7 @@ public class TipoEmpleadoRestController {
 		return tipoEmpleadoService.save(tipoEmpleado);
 	}
 	
-	@PutMapping("/tipoempleados/put/{id}")
+	@PutMapping("/tipoempleados/put={id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public TipoEmpleado update(@RequestBody TipoEmpleado tipoEmpleado, @PathVariable Long id) {
 		TipoEmpleado tipoEmpleadoActual = tipoEmpleadoService.findById(id);
@@ -52,13 +52,13 @@ public class TipoEmpleadoRestController {
 		return tipoEmpleadoService.save(tipoEmpleadoActual);	
 	}
 	
-	@DeleteMapping("/tipoempleados/delete/{id}")
+	@DeleteMapping("/tipoempleados/delete={id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
 		tipoEmpleadoService.delete(id);
 	}
 	
-	@PatchMapping("/tipoempleados/patch/{id}")
+	@PatchMapping("/tipoempleados/patch={id}")
     @ResponseStatus(HttpStatus.CREATED)
     public TipoEmpleado updatePartial(@RequestBody TipoEmpleado tipoEmpleado, @PathVariable Long id) {
 		TipoEmpleado tipoEmpleadoActual = tipoEmpleadoService.findById(id);
