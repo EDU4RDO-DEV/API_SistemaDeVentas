@@ -14,14 +14,22 @@ public class Empleado implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id_Persona;
 	private int Codigo_Empleado;
 	
+	private int Id_Persona;
 	private int TipoEmpleado_Id_TipoEmpleado;
 	private int Almacen_Id_Almacen;
 	private String Usuario;
 	private String Clave;
 	private char Estado;
+	
+	public int getCodigo_Empleado() {
+		return Codigo_Empleado;
+	}
+
+	public void setCodigo_Empleado(int codigo_Empleado) {
+		Codigo_Empleado = codigo_Empleado;
+	}
 	
 	public int getId_Persona() {
 		return Id_Persona;
@@ -29,14 +37,6 @@ public class Empleado implements Serializable{
 
 	public void setId_Persona(int id_Persona) {
 		Id_Persona = id_Persona;
-	}
-
-	public int getCodigo_Empleado() {
-		return Codigo_Empleado;
-	}
-
-	public void setCodigo_Empleado(int codigo_Empleado) {
-		Codigo_Empleado = codigo_Empleado;
 	}
 
 	public int getTipoEmpleado_Id_TipoEmpleado() {

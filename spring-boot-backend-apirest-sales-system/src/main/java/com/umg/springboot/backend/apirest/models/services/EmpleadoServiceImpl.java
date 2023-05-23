@@ -21,4 +21,25 @@ public class EmpleadoServiceImpl implements IEmpleadoService{
 		 
 		return (List<Empleado>) empleadoDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public Empleado findById(Long id) {
+		// TODO Auto-generated method stub
+		return empleadoDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public Empleado save(Empleado empleado) {
+		// TODO Auto-generated method stub
+		return empleadoDao.save(empleado);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		empleadoDao.deleteById(id);
+	}
 }
