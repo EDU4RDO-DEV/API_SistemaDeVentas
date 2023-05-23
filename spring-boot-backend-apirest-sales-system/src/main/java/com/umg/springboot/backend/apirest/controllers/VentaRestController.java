@@ -50,7 +50,7 @@ public class VentaRestController {
 		ventaActual.setCliente_Codigo_Cliente(venta.getCliente_Codigo_Cliente());
 		ventaActual.setEmpleado_Codigo_Empleado(venta.getEmpleado_Codigo_Empleado());
 		ventaActual.setNumero_venta(venta.getNumero_venta());
-		ventaActual.setFecha_vneta(venta.getFecha_vneta());
+		ventaActual.setFecha_venta(venta.getFecha_venta());
 		ventaActual.setMonto(venta.getMonto());
 		ventaActual.setEstado(venta.getEstado());
 		return ventaService.save(ventaActual);	
@@ -81,8 +81,8 @@ public class VentaRestController {
 	    		ventaActual.setNumero_venta(venta.getNumero_venta());
 	    	}
 	    	
-	    	if (venta.getFecha_vneta() != null) {
-	    		ventaActual.setFecha_vneta(venta.getFecha_vneta());
+	    	if (venta.getFecha_venta() != null) {
+	    		ventaActual.setFecha_venta(venta.getFecha_venta());
 	    	}
 	    	
 	    	if (venta.getMonto() != 0) {
