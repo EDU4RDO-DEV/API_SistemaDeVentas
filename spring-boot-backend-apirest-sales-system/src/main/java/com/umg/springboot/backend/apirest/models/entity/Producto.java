@@ -18,7 +18,7 @@ public class Producto implements Serializable{
 	
 	private int Categoria_Id_Categoria;
 	private int Proveedor_Id_Proveedor;
-	private int Almace_IdAlmacen;
+	private int almace_id_almacen;
 	private String Nombre_producto;
 	private double Precio;
 	private int Stock;
@@ -49,13 +49,6 @@ public class Producto implements Serializable{
 		Proveedor_Id_Proveedor = proveedor_Id_Proveedor;
 	}
 
-	public int getAlmace_IdAlmacen() {
-		return Almace_IdAlmacen;
-	}
-
-	public void setAlmace_IdAlmacen(int almace_IdAlmacen) {
-		Almace_IdAlmacen = almace_IdAlmacen;
-	}
 
 	public String getNombre_producto() {
 		return Nombre_producto;
@@ -95,6 +88,14 @@ public class Producto implements Serializable{
 
 	public void setEstado(char estado) {
 		Estado = estado;
+	}
+
+	public int getAlmace_id_almacen() {
+		return almace_id_almacen;
+	}
+
+	public void setAlmace_id_almacen(int almace_id_almacen) {
+		this.almace_id_almacen = almace_id_almacen;
 	}
 
 	/**
