@@ -27,7 +27,7 @@ public class ProductoRestController {
 	@Autowired
 	private IProductoService productoService;
 	
-	@GetMapping("/productos")
+	@GetMapping("/productos/get")
 	public List<Producto> index(){
 		return productoService.findAll();
 	}
