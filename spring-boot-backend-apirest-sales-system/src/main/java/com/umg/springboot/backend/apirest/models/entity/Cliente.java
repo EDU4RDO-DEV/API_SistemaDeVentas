@@ -16,7 +16,7 @@ public class Cliente implements Serializable{
 	private int Id_Persona;
 	
 	private String Codigo_Cliente;
-	private int TipoCliente_Id_TipoCliente;
+	private int tipo_cliente_id_tipo_cliente;
 	private char Estado;
 	
 	public int getId_Persona() {
@@ -35,13 +35,7 @@ public class Cliente implements Serializable{
 		Codigo_Cliente = codigo_Cliente;
 	}
 	
-	public int getTipoCliente_Id_TipoCliente() {
-		return TipoCliente_Id_TipoCliente;
-	}
-
-	public void setTipoCliente_Id_TipoCliente(int tipoCliente_Id_TipoCliente) {
-		TipoCliente_Id_TipoCliente = tipoCliente_Id_TipoCliente;
-	}
+	
 
 	public char getEstado() {
 		return Estado;
@@ -51,8 +45,21 @@ public class Cliente implements Serializable{
 		Estado = estado;
 	}
 
+	
+
+	public void setTipo_cliente_id_tipo_cliente(int tipo_cliente_id_tipo_cliente) {
+		this.tipo_cliente_id_tipo_cliente = tipo_cliente_id_tipo_cliente;
+	}
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;	
+	private static final long serialVersionUID = 1L;
+
+	public int getTipo_cliente_id_tipo_cliente() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
 }

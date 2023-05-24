@@ -49,7 +49,7 @@ public class ClienteRestController {
 		Cliente clienteActual = clienteService.findById(id);
 		clienteActual.setCodigo_Cliente(cliente.getCodigo_Cliente());
 		clienteActual.setId_Persona(cliente.getId_Persona());
-		clienteActual.setTipoCliente_Id_TipoCliente(cliente.getTipoCliente_Id_TipoCliente());	
+		clienteActual.setTipo_cliente_id_tipo_cliente(cliente.getTipo_cliente_id_tipo_cliente());	
 		return clienteService.save(clienteActual);	
 	}
 	
@@ -70,8 +70,8 @@ public class ClienteRestController {
 	    		clienteActual.setId_Persona(cliente.getId_Persona());
 	    	}
 	    	
-	    	if (cliente.getTipoCliente_Id_TipoCliente() != 0) {
-	    		clienteActual.setTipoCliente_Id_TipoCliente(cliente.getTipoCliente_Id_TipoCliente());
+	    	if (cliente.getTipo_cliente_id_tipo_cliente() != 0) {
+	    		clienteActual.setTipo_cliente_id_tipo_cliente(cliente.getTipo_cliente_id_tipo_cliente());
 	    	}
 	    	
 	    	if (clienteEstado != null) {
