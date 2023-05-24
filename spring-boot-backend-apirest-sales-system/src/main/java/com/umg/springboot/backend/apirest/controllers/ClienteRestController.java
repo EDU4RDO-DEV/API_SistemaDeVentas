@@ -47,9 +47,10 @@ public class ClienteRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Cliente update(@RequestBody Cliente cliente, @PathVariable Long id) {
 		Cliente clienteActual = clienteService.findById(id);
-		clienteActual.setCodigo_Cliente(cliente.getCodigo_Cliente());
+	    Character clienteEstado = cliente.getEstado();
 		clienteActual.setId_Persona(cliente.getId_Persona());
-		clienteActual.setTipo_cliente_id_tipo_cliente(cliente.getTipo_cliente_id_tipo_cliente());	
+		clienteActual.setTipo_cliente_id_tipo_cliente(cliente.getTipo_cliente_id_tipo_cliente());
+		clienteActual.setEstado(clienteEstado);
 		return clienteService.save(clienteActual);	
 	}
 	
@@ -75,7 +76,7 @@ public class ClienteRestController {
 	    	}
 	    	
 	    	if (clienteEstado != null) {
-	    		clienteActual.setEstado(clienteEstado.charValue());
+	    		clienteActual.setEstado(clienteEstado);
 	    	}
 		    
 	        // Actualiza los otros campos si es necesario
