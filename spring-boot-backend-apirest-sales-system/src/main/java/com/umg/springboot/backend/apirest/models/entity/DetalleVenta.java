@@ -14,19 +14,19 @@ public class DetalleVenta implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id_DetalleVenta;
+	private int Id_Detalle_Venta;
 	
 	private int Venta_Id_venta;
 	private long Producto_Id_Producto;
 	private int Cantidad;
 	private double Precio_venta;
 	
-	public int getId_DetalleVenta() {
-		return Id_DetalleVenta;
+	public int getId_Detalle_Venta() {
+		return Id_Detalle_Venta;
 	}
 
-	public void setId_DetalleVenta(int id_DetalleVenta) {
-		Id_DetalleVenta = id_DetalleVenta;
+	public void setId_Detalle_Venta(int id_DetalleVenta) {
+		Id_Detalle_Venta = id_DetalleVenta;
 	}
 
 	public int getVenta_Id_venta() {
