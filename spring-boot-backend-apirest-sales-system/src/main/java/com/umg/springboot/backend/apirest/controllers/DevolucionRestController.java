@@ -27,7 +27,7 @@ public class DevolucionRestController {
 	@Autowired
 	private IDevolucionService devolucionService;
 	
-	@GetMapping("/devoluciones")
+	@GetMapping("/devoluciones/get")
 	public List<Devolucion> index(){
 		return devolucionService.findAll();
 	}
