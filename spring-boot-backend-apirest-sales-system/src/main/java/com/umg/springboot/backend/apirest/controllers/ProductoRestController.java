@@ -27,7 +27,7 @@ public class ProductoRestController {
 	@Autowired
 	private IProductoService productoService;
 	
-	@GetMapping("/productos")
+	@GetMapping("/productos/get")
 	public List<Producto> index(){
 		return productoService.findAll();
 	}
@@ -51,7 +51,7 @@ public class ProductoRestController {
 
 		productoActual.setCategoria_Id_Categoria(producto.getCategoria_Id_Categoria());
 		productoActual.setProveedor_Id_Proveedor(producto.getProveedor_Id_Proveedor());
-		productoActual.setAlmace_IdAlmacen(producto.getAlmace_IdAlmacen());
+		productoActual.setAlmace_id_almacen(producto.getAlmace_id_almacen());
 		productoActual.setNombre_producto(producto.getNombre_producto());
 		productoActual.setPrecio(producto.getPrecio());
 		productoActual.setStock(producto.getStock());
@@ -81,8 +81,8 @@ public class ProductoRestController {
 	    		productoActual.setProveedor_Id_Proveedor(producto.getProveedor_Id_Proveedor());
 	    	}
 	    	
-	    	if (producto.getAlmace_IdAlmacen() != 0) {
-	    		productoActual.setAlmace_IdAlmacen(producto.getAlmace_IdAlmacen());
+	    	if (producto.getAlmace_id_almacen() != 0) {
+	    		productoActual.setAlmace_id_almacen(producto.getAlmace_id_almacen());
 	    	}
 		    
 	    	if (producto.getNombre_producto() != null) {
