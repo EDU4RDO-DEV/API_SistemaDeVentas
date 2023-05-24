@@ -27,7 +27,7 @@ public class DevolucionRestController {
 	@Autowired
 	private IDevolucionService devolucionService;
 	
-	@GetMapping("/devoluciones")
+	@GetMapping("/devoluciones/get")
 	public List<Devolucion> index(){
 		return devolucionService.findAll();
 	}
@@ -47,8 +47,8 @@ public class DevolucionRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Devolucion update(@RequestBody Devolucion devolucion, @PathVariable Long id) {
 		Devolucion devolucionActual = devolucionService.findById(id);
-	    devolucionActual.setDetalleVenta_IdDetalleVenta(devolucion.getDetalleVenta_IdDetalleVenta());
-	    devolucionActual.setDetalleVenta_IdProducto(devolucion.getDetalleVenta_IdProducto());
+	    devolucionActual.setDetalle_venta_id_detalle_venta(devolucion.getDetalle_venta_id_detalle_venta());
+	    devolucionActual.setDetalle_venta_id_producto(devolucion.getDetalle_venta_id_producto());
 	    devolucionActual.setMotivo(devolucion.getMotivo());
 	    devolucionActual.setFecha_devolucion(devolucion.getFecha_devolucion());
 	    devolucionActual.setCantidad(devolucion.getCantidad());
@@ -67,12 +67,12 @@ public class DevolucionRestController {
 		Devolucion devolucionActual = devolucionService.findById(id);
 
 	    if (devolucionActual != null) {
-	    	if (devolucion.getDetalleVenta_IdDetalleVenta() != 0) {
-	    		devolucionActual.setDetalleVenta_IdDetalleVenta(devolucion.getDetalleVenta_IdDetalleVenta());
+	    	if (devolucion.getDetalle_venta_id_detalle_venta() != 0) {
+	    		devolucionActual.setDetalle_venta_id_detalle_venta(devolucion.getDetalle_venta_id_detalle_venta());
 	    	}
 	    	
-	    	if (devolucion.getDetalleVenta_IdProducto() != 0) {
-	    		devolucionActual.setDetalleVenta_IdProducto(devolucion.getDetalleVenta_IdProducto());
+	    	if (devolucion.getDetalle_venta_id_producto() != 0) {
+	    		devolucionActual.setDetalle_venta_id_producto(devolucion.getDetalle_venta_id_producto());
 	    	}
 	    	
 	    	if (devolucion.getMotivo() != null) {
