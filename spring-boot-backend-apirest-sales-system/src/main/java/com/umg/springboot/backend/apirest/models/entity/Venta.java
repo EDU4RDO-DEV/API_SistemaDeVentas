@@ -15,14 +15,13 @@ import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name="tb_venta")
-
 public class Venta implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Id_Venta;
 	
-	private String Cliente_Codigo_Cliente;
+	private int Cliente_Codigo_Cliente;
 	private int Empleado_Codigo_Empleado;
 	private String Numero_venta;
 	private double Monto;
@@ -45,11 +44,11 @@ public class Venta implements Serializable{
 		Id_Venta = id_Venta;
 	}
 
-	public String getCliente_Codigo_Cliente() {
+	public int getCliente_Codigo_Cliente() {
 		return Cliente_Codigo_Cliente;
 	}
 
-	public void setCliente_Codigo_Cliente(String cliente_Codigo_Cliente) {
+	public void setCliente_Codigo_Cliente(int cliente_Codigo_Cliente) {
 		Cliente_Codigo_Cliente = cliente_Codigo_Cliente;
 	}
 
@@ -85,21 +84,17 @@ public class Venta implements Serializable{
 		Estado = estado;
 	}
 
-	
+	public Date getFecha_venta() {
+		return Fecha_venta;
+	}
 
 	public void setFecha_venta(Date fecha_venta) {
 		Fecha_venta = fecha_venta;
 	}
 
 	/**
-	 *
+	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	public Date getFecha_venta() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
 }

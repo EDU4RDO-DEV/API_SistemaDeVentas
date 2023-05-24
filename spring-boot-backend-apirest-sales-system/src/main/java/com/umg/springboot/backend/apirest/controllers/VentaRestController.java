@@ -47,12 +47,13 @@ public class VentaRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Venta update(@RequestBody Venta venta, @PathVariable Long id) {
 		Venta ventaActual = ventaService.findById(id);
+		Character ventaEstado = venta.getEstado();
 		ventaActual.setCliente_Codigo_Cliente(venta.getCliente_Codigo_Cliente());
 		ventaActual.setEmpleado_Codigo_Empleado(venta.getEmpleado_Codigo_Empleado());
 		ventaActual.setNumero_venta(venta.getNumero_venta());
 		ventaActual.setFecha_venta(venta.getFecha_venta());
 		ventaActual.setMonto(venta.getMonto());
-		ventaActual.setEstado(venta.getEstado());
+		ventaActual.setEstado(ventaEstado);
 		return ventaService.save(ventaActual);	
 	}
 	
@@ -69,7 +70,7 @@ public class VentaRestController {
 	    Character ventaEstado = venta.getEstado();
 
 	    if (ventaActual != null) {
-	    	if (venta.getCliente_Codigo_Cliente() != null) {
+	    	if (venta.getCliente_Codigo_Cliente() != 0) {
 	    		ventaActual.setCliente_Codigo_Cliente(venta.getCliente_Codigo_Cliente());
 	    	}
 	    	
