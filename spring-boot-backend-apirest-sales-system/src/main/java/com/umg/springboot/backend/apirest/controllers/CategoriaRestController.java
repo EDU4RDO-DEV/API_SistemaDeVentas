@@ -47,9 +47,10 @@ public class CategoriaRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Categoria update(@RequestBody Categoria categoria, @PathVariable Long id) {
 		Categoria categoriaActual = categoriaService.findById(id);
+	    Character categoriaEstado = categoria.getEstado();
 		categoriaActual.setNombre_categoria(categoria.getNombre_categoria());
 		categoriaActual.setDescripcion(categoria.getDescripcion());
-		categoriaActual.setEstado(categoria.getEstado());	
+		categoriaActual.setEstado(categoriaEstado);	
 		return categoriaService.save(categoriaActual);	
 	}
 	
