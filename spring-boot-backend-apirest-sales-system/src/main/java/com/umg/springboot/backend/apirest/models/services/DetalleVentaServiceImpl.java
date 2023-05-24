@@ -21,4 +21,25 @@ public class DetalleVentaServiceImpl implements IDetalleVentaService{
 		 
 		return (List<DetalleVenta>) detalleVentaDao.findAll();
 	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public DetalleVenta findById(Long id) {
+		// TODO Auto-generated method stub
+		return detalleVentaDao.findById(id).orElse(null);
+	}
+
+	@Override
+	@Transactional
+	public DetalleVenta save(DetalleVenta detalleVenta) {
+		// TODO Auto-generated method stub
+		return detalleVentaDao.save(detalleVenta);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		detalleVentaDao.deleteById(id);
+	}
 }
