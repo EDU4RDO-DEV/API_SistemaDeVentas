@@ -22,7 +22,9 @@ public class Devolucion implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int Id_Devolucion;
 	
+	@Column(name="detalle_venta_id_detalle_venta")
 	private int detalle_venta_id_detalle_venta;
+	@Column(name="detalle_venta_id_producto")
 	private long detalle_venta_id_producto;
 	private String Motivo;
 	private int Cantidad;
@@ -44,8 +46,21 @@ public class Devolucion implements Serializable{
 		Id_Devolucion = id_Devolucion;
 	}
 
+	public int getDetalle_venta_id_detalle_venta() {
+		return detalle_venta_id_detalle_venta;
+	}
 	
+	public void setDetalle_venta_id_detalle_venta(int detalle_venta_id_detalle_venta) {
+		this.detalle_venta_id_detalle_venta = detalle_venta_id_detalle_venta;
+	}
 
+	public long getDetalle_venta_id_producto() {
+		return detalle_venta_id_producto;
+	}
+
+	public void setDetalle_venta_id_producto(long detalle_venta_id_producto) {
+		this.detalle_venta_id_producto = detalle_venta_id_producto;
+	}
 
 	public String getMotivo() {
 		return Motivo;
@@ -71,27 +86,9 @@ public class Devolucion implements Serializable{
 		Fecha_devolucion = fecha_devolucion;
 	}
 
-	public int getDetalle_venta_id_detalle_venta() {
-		return detalle_venta_id_detalle_venta;
-	}
-
-	public void setDetalle_venta_id_detalle_venta(int detalle_venta_id_detalle_venta) {
-		this.detalle_venta_id_detalle_venta = detalle_venta_id_detalle_venta;
-	}
-
-	
-
-	public void setDetalle_venta_id_producto(long detalle_venta_id_producto) {
-		this.detalle_venta_id_producto = detalle_venta_id_producto;
-	}
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	public int getDetalle_venta_id_producto() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }
